@@ -23,7 +23,7 @@ class Instagram:
          print("The creator name of the reel is ",self.creator_name)
      def display_location(self):
          print("The location of the reel is ",self.location)
-reel1=Instagram("dancing","dancing with friends","Nice Dance","Savita","Mysuru")
+reel1=Instagram("dancing","dancing with friends","Nice Dance","Chandana","Mysuru")
 # 0
 reel1.disliked() #0
 reel1.liked() #1
@@ -42,4 +42,5 @@ reel2.display_comments()
 reel1.display_creator_name()
 reel2.display_creator_name()
 reel1.display_location()
+
 reel2.display_location()
