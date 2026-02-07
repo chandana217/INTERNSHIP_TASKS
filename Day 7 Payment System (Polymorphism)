@@ -1,0 +1,31 @@
+# Parent class
+class Payment:
+    def pay(self):
+        print("Processing payment...")
+
+# Child class 1
+class GooglePay(Payment):
+    def pay(self):
+        print("Payment completed using Google Pay")
+
+# Child class 2
+class PhonePe(Payment):
+    def pay(self):
+        print("Payment completed using PhonePe")
+
+# Child class 3
+class CreditCard(Payment):
+    def pay(self):
+        print("Payment completed using Credit Card")
+
+# Creating objects
+payment = Payment()
+gpay = GooglePay()
+phonepe = PhonePe()
+card = CreditCard()
+
+# Calling pay() method
+payment.pay()
+gpay.pay()
+phonepe.pay()
+card.pay()
