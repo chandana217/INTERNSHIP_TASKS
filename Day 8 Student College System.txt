@@ -1,0 +1,50 @@
+# Student College System
+
+class Student:
+    # Class variable (shared by all students)
+    college_name = "ABC College"
+
+    # Constructor
+    def __init__(self, name, roll_no):
+        self.name = name
+        self.roll_no = roll_no
+
+    # Instance method
+    def display(self):
+        print("Name:", self.name)
+        print("Roll No:", self.roll_no)
+        print("College:", Student.college_name)
+        print("--------------------")
+
+    # Class method
+    @classmethod
+    def change_college(cls, new_name):
+        cls.college_name = new_name
+
+    # Static method
+    @staticmethod
+    def is_pass(marks):
+        if marks >= 35:
+            return "Pass"
+        else:
+            return "Fail"
+
+
+# Main program
+student1 = Student("Chandana", 101)
+student2 = Student("Ananya", 102)
+
+# Display student details
+student1.display()
+student2.display()
+
+# Change college name using classmethod
+Student.change_college("XYZ College")
+
+# Display details again (college name should change for both)
+student1.display()
+student2.display()
+
+# Check pass/fail using staticmethod
+print("Student 1 Result:", Student.is_pass(78))
+print("Student 2 Result:", Student.is_pass(30))
